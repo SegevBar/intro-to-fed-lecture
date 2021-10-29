@@ -1,0 +1,43 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  color: pink;
+  text-align: center;
+  font-family: tahoma;
+  font-size: 80px;
+}
+
+p {
+  color: grey;
+  text-align: center;
+  font-family: Tahoma;
+  font-size: 30px;
+  direction: rtl;
+}
+
+button {
+  background-color: white; 
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: lightpink; 
+  color: white;
+}
+
+div {
+  margin: auto;
+  width: 60%;
+  border: none;
+  padding: 10px;
+  text-align: center;
+}
