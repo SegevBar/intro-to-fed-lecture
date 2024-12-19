@@ -10,34 +10,33 @@ function game(playerMove) {
   let computer;
 
   if (computerNum === 0) {
-    computer = "אבן";
+    computer = "rock";
   } else if (computerNum === 1) {
-    computer = "נייר";
+    computer = "paper";
   } else if (computerNum === 2) {
-    computer = "מספריים";
+    computer = "scissors";
   }
 
   let result = document.getElementById("results");
 
   if (player === computer) {
-    result.insertAdjacentHTML("beforeend", "<p>בחרת " + player + " והמחשב בחר " + computer + "- <strong>אויש! תיקו!</strong> 😅</p>");
-  //אם לא תיקו:
-  } else if (player === "מספריים" && computer === "נייר") {
-    result.insertAdjacentHTML("beforeend","<p>בחרת ✌️ " + player + " והמחשב בחר ✋ " + computer + "- <strong>ניצחת! 🤩</strong></p>");
+    result.insertAdjacentHTML("beforeend", "<p>It's a tye! 😅</p>");
+  } else if (player === "scissors" && computer === "paper") {
+    result.insertAdjacentHTML("beforeend","<p>Computer Chose ✋ - You are the winner! 🤩</p>");
 
-  } else if (player === "אבן" && computer === "מספריים") {
-    result.insertAdjacentHTML("beforeend","<p>בחרת ✊ " + player + " והמחשב בחר ✌️ " + computer + "- <strong>ניצחת!  🤩</strong></p>");
+  } else if (player === "rock" && computer === "scissors") {
+    result.insertAdjacentHTML("beforeend","<p>Computer Chose ✌️ - You are the winner! 🤩</p>");
 
-  } else if (player === "נייר" && computer === "אבן") {
-    result.insertAdjacentHTML("beforeend","<p>בחרת ✋ " + player + " והמחשב בחר ✊ " + computer + "- <strong>ניצחת! 🤩</strong></p>");
+  } else if (player === "paper" && computer === "rock") {
+    result.insertAdjacentHTML("beforeend","<p>Computer Chose ✊ - You are the winner! 🤩</p>");
  
-  } else if (computer === "מספריים" && player === "נייר") {
-    result.insertAdjacentHTML("beforeend","<p>בחרת ✋ " + player + " והמחשב בחר ✌️ " + computer + "- <strong>המחשב ניצח...😕 </strong></p>");
+  } else if (computer === "scissors" && player === "paper") {
+    result.insertAdjacentHTML("beforeend","<p>Computer Chose ✌️ - You lost 😕</p>");
 
-  } else if (computer === "אבן" && player === "מספריים") {
-    result.insertAdjacentHTML("beforeend","<p>בחרת ✌️ " + player + " והמחשב בחר ✊ " + computer + "- <strong>המחשב ניצח...😕 </strong></p>");
+  } else if (computer === "rock" && player === "scissors") {
+    result.insertAdjacentHTML("beforeend","<p>Computer Chose ✊ - You lost 😕</p>")
 
-  } else if (computer === "נייר" && player === "אבן") {
-    result.insertAdjacentHTML("beforeend","<p>בחרת ✊ " + player + " והמחשב בחר ✋ " + computer + "- <strong>המחשב ניצח...😕 </strong></p>");
+  } else if (computer === "paper" && player === "rock") {
+    result.insertAdjacentHTML("beforeend","<p>Computer Chose ✋ - You lost 😕</p>");
   } 
 }
