@@ -12,7 +12,7 @@ const formatPrice = (n) => `$${n.toFixed(2)}`;
 
 // FUNCTIONS: higher-order (returns function) + closure
 const createDiscount = (percent) => (price) => price * (1 - percent / 100);
-const studentDiscount = createDiscount(15);
+const studentDiscount = createDiscount(15); // remembers percent = 15
 
 // ASYNC: simulated API call with Promise
 function fetchProducts() {
@@ -54,7 +54,7 @@ function updateCart() {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     
     document.getElementById('count').textContent = cart.length;
-    document.getElementById('total').textContent = formatPrice(total);
+    document.getElementById('total').textContent = formatPrice(studentDiscount(total));
 }
 
 init();
